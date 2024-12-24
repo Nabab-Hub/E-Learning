@@ -1,0 +1,137 @@
+/* Body */
+.question-form-container {
+    background-color: #0F2027;
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-size: 300% 300%; /* Larger background to allow for movement */
+    animation: gradientMove 10s ease infinite; /* Animation for the moving effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Keyframes for gradient animation */
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Container for the form */
+  .question-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #203A43; /* Match the background gradient color */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Max width for the form */
+    margin: 20px auto;
+    box-sizing: border-box;
+  }
+  
+  /* Heading for the form */
+  .question-form-container h1 {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  /* Input fields container */
+  .question-form-container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Label style */
+  .question-form-container label {
+    font-size: 14px;
+    color: #ddd; /* Lighter color for the label */
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+  
+  /* Input fields */
+  .question-form-container input,
+  .question-form-container textarea {
+    width: 100%;
+    padding: 12px; /* Increased padding for better usability */
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    box-sizing: border-box; /* Ensures padding is included in width calculation */
+  }
+  
+  /* Input focus state */
+  .question-form-container input:focus,
+  .question-form-container textarea:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+  }
+  
+  /* Submit button styling */
+  .question-form-container button {
+    padding: 12px 18px;
+    background-color: #4a90e2; /* Light blue color */
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  /* Hover effect for the button */
+  .question-form-container button:hover {
+    background-color: #357ab7; /* Darker blue for hover effect */
+  }
+  
+  /* Button disabled state */
+  .question-form-container button:disabled {
+    background-color: #c7d7e0;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive design for small screens */
+  @media (max-width: 768px) {
+    .question-form-container {
+      padding: 15px;
+      width: 90%;
+    }
+  
+    .question-form-container h1 {
+      font-size: 20px;
+    }
+  
+    .question-form-container label,
+    .question-form-container input,
+    .question-form-container textarea {
+      font-size: 13px;
+    }
+  
+    .question-form-container button {
+      font-size: 14px;
+      padding: 10px 15px;
+    }
+  }
+  

@@ -1,0 +1,152 @@
+/* Ensure the body takes full height and applies the background correctly */
+body {
+    background: #1c2833;
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Container for the feedback forms */
+  .feedback-container {
+    background: #2c3e50; /* Set background color for the inner container */
+    color: white;
+    padding: 20px;
+    max-width: 800px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1; /* Ensures container grows to fit content but doesn't overflow */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to the top */
+  }
+  
+  /* Heading Styles */
+  .feedback-heading {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+  }
+  
+  /* Feedback List Container */
+  .feedback-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  /* Individual Feedback Card */
+  .feedback-card {
+    background-color: #34495e;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .feedback-card:hover {
+    transform: scale(1.05); /* Hover effect to make it pop */
+  }
+  
+  /* Feedback Form Title */
+  .feedback-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  /* Feedback Form Description */
+  .feedback-description {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+  
+  /* List of Questions */
+  .feedback-questions {
+    list-style-type: decimal;
+    padding-left: 20px;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  
+  .feedback-question {
+    font-size: 16px;
+    margin: 8px 0;
+  }
+  
+  /* Button Styles */
+  .feedback-btn {
+    padding: 12px 25px;
+    background-color: #00a8cc;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .feedback-btn:hover {
+    background-color: #007b99;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .feedback-container {
+      padding: 15px;
+      margin: 20px auto;
+      max-width: 100%; /* Allow full width on small screens */
+    }
+  
+    .feedback-heading {
+      font-size: 28px;
+    }
+  
+    .feedback-title {
+      font-size: 20px;
+    }
+  
+    .feedback-btn {
+      padding: 10px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .feedback-heading {
+      font-size: 24px;
+    }
+  
+    .feedback-title {
+      font-size: 18px;
+    }
+  
+    .feedback-btn {
+      font-size: 16px;
+      padding: 8px 15px;
+    }
+  
+    .feedback-card {
+      padding: 10px;
+    }
+  
+    .feedback-description {
+      font-size: 14px;
+    }
+  
+    .feedback-question {
+      font-size: 14px;
+    }
+  }
+  

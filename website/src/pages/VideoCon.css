@@ -1,0 +1,148 @@
+body {
+    background: #0F2027;
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-size: 300% 300%; /* Larger background to allow for movement */
+    animation: gradientMove 10s ease infinite; /* Animation for the moving effect */
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#join-btn {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    background-color: #00a8cc;
+    transition: background-color 0.3s ease;
+}
+
+#join-btn:hover {
+    background-color: #007b99;
+}
+
+#video-streams {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); /* Larger incoming video */
+    height: 90vh;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    gap: 20px;
+}
+
+.video-container {
+    max-height: 100%;
+    border: 2px solid black;
+    background-color: #203A49;
+}
+
+.video-player {
+    height: 100%;
+    width: 100%;
+}
+
+#local-video-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 120px; /* Small self-view */
+    height: 120px;
+    border-radius: 8px;
+    background-color: #203A49;
+    border: 2px solid #00a8cc;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+#local-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button {
+    border: none;
+    background-color: cadetblue;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #007b99;
+}
+
+#stream-controls {
+    display: none; /* Initially hidden */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    #join-btn {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+
+    #video-streams {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    #local-video-container {
+        width: 100px; /* Smaller self-view on small devices */
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #join-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    #stream-controls {
+        flex-direction: column;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    #local-video-container {
+        width: 80px; /* Even smaller self-view for very small screens */
+        height: 80px;
+    }
+}

@@ -1,0 +1,120 @@
+/* Fullscreen container with moving pattern background */
+.studentportal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh;
+    width: 100vw; */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* background: linear-gradient(45deg, #f06, #4a90e2, #fbc02d); */
+    background-size: 300% 300%;
+    animation: movePattern 10s linear infinite;
+    overflow: hidden;
+}
+
+/* Background animation */
+@keyframes movePattern {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* Portal box styling */
+.portal-box {
+    background: rgba(0, 0, 0, 0.8); /* Transparent dark background for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    color: white;
+}
+
+/* Title styling */
+.portal-box h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fbc02d; /* Highlighted color matching the theme */
+}
+
+/* Dropdown container */
+.dropdown-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 2rem;
+}
+
+.dropdown-content select {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #333; /* Dark input background */
+    color: white; /* Text color for inputs */
+    border: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+}
+
+.dropdown-content select:focus {
+    outline: none;
+    background-color: #444; /* Slightly lighter background on focus */
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.8); /* Glow effect on focus */
+}
+
+/* Option grid styling */
+.option-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.option {
+    background-color: rgba(74, 144, 226, 0.8); /* Semi-transparent blue */
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.option:hover {
+    background-color: rgba(42, 109, 184, 0.9); /* Darker shade on hover */
+    transform: translateY(-5px); /* Subtle lift effect */
+}
+
+.option h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .option-box {
+        grid-template-columns: 1fr;
+    }
+
+    .dropdown-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dropdown-content select {
+        max-width: 100%;
+    }
+}

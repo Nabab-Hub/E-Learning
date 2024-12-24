@@ -1,0 +1,203 @@
+/* Outer container for full-screen layout */
+.outer-container-generate-ques {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    /* background-color: #f1f3f4;  */
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+/* Inner container for the form */
+.inner-container {
+    margin-top: 2rem;
+    background: #ffffff; /* White background to keep focus on content */
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    /* width: 100%; */
+    max-width: 750px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Form heading */
+.form-heading {
+    font-size: 32px;
+    text-align: center;
+    color: #1a73e8; /* Google Blue color */
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+/* Subject heading */
+.subject-heading {
+    font-size: 24px;
+    text-align: center;
+    color: #333; /* Darker text for better contrast */
+    margin-bottom: 32px;
+    font-weight: 500;
+}
+
+/* Section Titles */
+.inner-container h2 {
+    font-size: 20px;
+    color: #1a73e8;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #ddd; /* Light border for section separation */
+    padding-bottom: 8px;
+    font-weight: 500;
+}
+
+/* Questions List */
+.inner-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.inner-container li {
+    margin-bottom: 18px;
+    font-size: 18px;
+    color: #444;
+    line-height: 1.5; /* Improve readability */
+}
+
+/* Question Text */
+.question-text {
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Options Styling (MCQ and other options) */
+.options {
+    margin-left: 20px;
+    margin-top: 8px;
+}
+
+.options div {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+/* Download button styling */
+.download-button {
+    background-color: #1a73e8;
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 500;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.download-button:hover {
+    background-color: #1558a3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow on hover */
+}
+
+/* Download button: Disabled state */
+.download-button:disabled {
+    background-color: #d1e3f3;
+    cursor: not-allowed;
+}
+
+/* Input Styles (Radio/Checkbox) - Mimic Google Forms */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 8px;
+    vertical-align: middle;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #757575;
+    border-radius: 50%; /* For radio buttons */
+    outline: none;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked {
+    border: 5px solid #1a73e8;
+    background-color: #1a73e8;
+    background-clip: content-box;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #1a73e8;
+    border: none;
+    position: relative;
+}
+
+input[type="checkbox"]:checked::before {
+    content: '\2713'; /* Checkmark */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+}
+
+/* Responsive Design for Mobile and Tablets */
+@media (max-width: 768px) {
+    .inner-container {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    .form-heading {
+        font-size: 28px;
+        margin-bottom: 18px;
+    }
+
+    .subject-heading {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+
+    .inner-container h2 {
+        font-size: 18px;
+    }
+
+    .download-button {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    .question-text {
+        font-size: 16px;
+    }
+
+    .options {
+        margin-left: 15px;
+    }
+}
+
+/* Improve overall spacing and layout */
+.inner-container ul {
+    padding-left: 20px;
+}
+
+.inner-container li {
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+/* Add subtle hover effect for questions */
+.inner-container li:hover {
+    background-color: #f1f3f4;
+    border-radius: 4px;
+    cursor: pointer;
+}

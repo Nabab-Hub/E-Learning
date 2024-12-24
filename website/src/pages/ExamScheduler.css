@@ -1,0 +1,144 @@
+/* Fullscreen container with moving pattern background */
+.exam-scheduler-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #1e3c72, #2a5298, #00c6ff);
+    background-size: 300% 300%;
+    animation: movePattern 10s linear infinite;
+    overflow: hidden;
+}
+
+/* Background animation */
+@keyframes movePattern {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* Exam Scheduler box styling */
+.exam-scheduler-inner-container {
+    background: rgba(0, 0, 0, 0.7); /* Dark transparent background for contrast */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    color: white;
+}
+
+/* Title styling */
+.exam-scheduler-heading {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #00c6ff; /* Highlighted color matching the theme */
+}
+
+/* Form styling */
+.exam-scheduler-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; /* Center elements horizontally */
+}
+
+/* Form group styling */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    max-width: 400px; /* Limiting width of inputs */
+}
+
+label {
+    font-size: 18px;
+    color: #e8e8e8; /* Light text color */
+}
+
+/* Input field styling */
+input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #444; /* Dark border color */
+    border-radius: 8px;
+    background-color: #333; /* Dark input background */
+    color: #e8e8e8; /* Light text color */
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+    outline: none;
+    border-color: #00c6ff; /* Focus border color */
+    background-color: #444; /* Slightly lighter background on focus */
+}
+
+/* Button styling */
+.exam-scheduler-btn {
+    padding: 14px 30px;
+    background-color: #2a5298; /* Darker blue button */
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+.exam-scheduler-btn:hover {
+    background-color: #1e3c72; /* Darker blue on hover */
+}
+
+.exam-scheduler-btn:active {
+    background-color: #16325c; /* Even darker blue on click */
+}
+
+/* Center the button */
+.exam-scheduler-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .exam-scheduler-inner-container {
+        padding: 20px;
+    }
+
+    .exam-scheduler-heading {
+        font-size: 28px;
+    }
+
+    .exam-scheduler-btn {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .exam-scheduler-heading {
+        font-size: 24px;
+    }
+
+    .exam-scheduler-btn {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
