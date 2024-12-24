@@ -6,7 +6,7 @@ export const AuthProvider = ({children}) => {
 
     // const BACKEND_HOSTING_URL = 'https://dbbe-2409-40e1-1d-e085-5d44-bc22-a559-944c.ngrok-free.app'
     const BACKEND_HOSTING_URL = 'http://localhost:8000'
-    const PYTHON_BACKEND_HOSTING_URL = 'http://127.0.0.1:8868'
+    const PYTHON_BACKEND_HOSTING_URL = 'https://informed-choice-wahoo.ngrok-free.app'
 
     const [token, setToken] = useState(localStorage.getItem('token'))
     const [user, setUser] = useState('')
